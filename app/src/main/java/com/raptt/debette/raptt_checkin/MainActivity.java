@@ -47,9 +47,9 @@ public class MainActivity extends MenuActivity {
             Calendar calendar = Calendar.getInstance();
             calendar.set(Calendar.HOUR_OF_DAY, alarmTimePicker.getCurrentHour());
             calendar.set(Calendar.MINUTE, alarmTimePicker.getCurrentMinute());
-            Intent myIntent = new Intent(MainActivity.this, AlarmReceiver.class);
-            pendingIntent = PendingIntent.getBroadcast(MainActivity.this, 0, myIntent, 0);
-            alarmManager.set(AlarmManager.RTC, calendar.getTimeInMillis(), pendingIntent);
+            Intent myIntent = new Intent(this, MyReceiver.class);
+            pendingIntent = PendingIntent.getBroadcast(this.getApplicationContext(), 0, myIntent, 0);
+            alarmManager.set(AlarmManager.RTC_WAKEUP, calendar.getTimeInMillis(), pendingIntent);
         } else {
             alarmManager.cancel(pendingIntent);
             setAlarmText("");

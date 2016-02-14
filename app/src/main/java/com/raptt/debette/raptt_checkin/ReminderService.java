@@ -78,7 +78,12 @@ public class ReminderService extends IntentService {
         nb.setVibrate(v);
 
         Uri uri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
-        //nb.setSound(uri);
+        nb.setSound(uri);
+
+        Uri alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_ALARM);
+        if (alarmUri == null) {
+            alarmUri = RingtoneManager.getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
+        }
 
         //final Uri ringtone = Uri.parse(PreferenceManager.getDefaultSharedPreferences(ReminderService.this).getString("ringtone", getString(R.string.settings_default_ringtone)));
 
