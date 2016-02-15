@@ -1,5 +1,13 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
+
+    <EditTextPreference
+        android:key="Delai"
+        android:title="Advance ringing"
+        android:summary="input in minutes"
+        android:numeric="integer"
+        android:maxLength="2"
+        android:defaultValue="15" />
     <!-- A 'parent' preference, which enables/disables child preferences (below)
          when checked/unchecked. -->
     <SwitchPreference

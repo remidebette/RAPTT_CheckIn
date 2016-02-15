@@ -10,10 +10,28 @@
     tools:context="com.raptt.debette.raptt_checkin.CalendarActivity">
 
     <RadioButton
-        android:drawableRight="@drawable/ic_line_a"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rotation 1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:checked="true"
-        android:text=""
-        android:id="@+id/radio0" />
+        android:id="@+id/radio1" />
+
+    <RadioButton
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rotation 2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_below="@+id/radio1"
+        android:id="@+id/radio2" />
+
+    <RadioButton
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Rotation 3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="true"
+        android:layout_below="@+id/radio2"
+        android:id="@+id/radio3" />
 </RelativeLayout>
